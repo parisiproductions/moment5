@@ -1,0 +1,50 @@
+
+
+/*Standardtema färger, ljust tema*/
+
+
+$light-pink: #f5dae4;
+$white: #f3f3f3;
+$pink-white:  #f7ebf2;
+$cerise:  #86113c;
+$lighter-cerise: #e9417e;
+$black: #111111;
+$shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+
+$background-color: $light-pink;
+$hamburger-menu-color: $black;
+$main-color: $pink-white;
+$button-color: saturate($cerise, 20%);
+$button-text: $white;
+
+$button-click: $lighter-cerise;
+
+$headings-color: darken($background-color, 40%);
+$paragraph-color: $black;
+
+$menu-background-color: lighten($cerise, 60%);
+$menu-link-color: $black;
+
+
+:root {
+    --background-color: #f5dae4;
+    --heading-color: #d62264;;
+    --main-color: #f7ebf2;
+}
+
+/* Mörkt tema */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #252222;
+        --text-color: #ffffff; 
+        --heading-color: #d62264; 
+        --main-color: #252222;
+    }
+}
+
+/*Olika logo beroende på tema*/
+$logo-light: "./images/kattcafelogo.svg";
+$logo-dark: "./images/logoDark.svg";
+
+

@@ -1,0 +1,185 @@
+@use "mixins";
+@use "variables";
+
+/* Header och navigation */
+.top-header {
+    background-color: variables.$background-color;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+    color: variables.$menu-link-color;
+}
+
+#nav-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    background-color: white;
+    width: 100%;
+
+    a:hover {
+        background-color: variables.$menu-background-color;
+    }
+}
+
+nav {
+    display: none;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            padding-bottom: 0.7rem;
+
+            a {
+                text-decoration: none;
+                font-size: 1.2rem;
+                color: variables.$paragraph-color;
+                padding: 1.1rem 1.5rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.nav-link-active {
+    color: variables.$headings-color;
+    font-weight: bold;
+    padding: 1.1rem 1.5rem;
+}
+
+.icon-light {
+    display: inline-block;
+}
+
+.icon-dark {
+    display: none;
+}
+
+/* Färgändringar för mörkt tema */
+@media (prefers-color-scheme: dark) {
+    .icon {
+        color: variables.$white;
+    }
+
+    #nav-menu {
+        background-color: #000;
+
+        a {
+            color: variables.$white;
+
+            &:hover {
+                background-color: #ffffff4d;
+            }
+        }
+    }
+
+    .nav-link-active {
+        color: variables.$headings-color !important;
+    }
+}
+
+/* Hamburgermeny och stäng-knapp */
+.hamburger-btn, .close-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.hamburger-btn {
+    display: none;
+}
+
+#close-menu {
+    display: none;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+/* Media queries */
+/* Skärmar mindre än eller lika med 1024px */
+
+@media (max-width: 1024px) {
+    .hamburger-btn {
+        display: block;
+    }
+
+    .navigation {
+        justify-content: space-between;
+        padding-right: 1rem;
+        flex-direction: row;
+    }
+
+    #nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: variables.$background-color;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100vh;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        z-index: 1000;
+
+        ul {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        &.hidden {
+            display: none;
+        }
+    }
+
+    #close-menu {
+        display: block;
+    }
+
+    .logo img {
+        width: 50%;
+        height: auto;
+    }
+}
+
+
+/*Mindre skärm och mörkt tema*/
+@media (max-width: 1024px) and (prefers-color-scheme: dark) {
+    #nav-menu {
+        background-color: black;
+        color: white;
+
+        a {
+            color: white;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+        }
+    }
+}

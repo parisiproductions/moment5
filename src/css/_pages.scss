@@ -1,0 +1,333 @@
+@use "variables";
+@use "animering";
+@use "mixins";
+
+
+
+
+.logo{
+  padding: 1rem;
+}
+
+/*Standardlogo*/
+.logo img{
+  width: 70%; 
+  height: auto;
+}
+
+
+/*Startsidan*/
+
+.welcome-section {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.336)), 
+              url("../images/perser.webp") no-repeat center/cover;
+  display: flex;
+  gap: 3.5rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+    h1, h2{
+        text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+
+    }
+}
+
+
+    .button-container {
+        display: flex;
+        gap: 3rem; 
+        padding: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+  
+
+
+.info-section1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.8;
+    gap: 2rem;
+    padding: 1rem;
+    max-width: 1300px;
+    margin: auto;
+
+  
+    .text-block {
+        flex: 1;
+    
+      h1 {
+        margin-bottom: 1rem;
+        font-size: clamp(1.5rem, 5vw, 3rem);
+
+      
+
+      p {
+        margin-bottom: 1rem;
+       
+      
+    }}}
+
+
+    .image-block {
+     padding-top: 4rem;
+
+      img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
+        border-radius: 10px;
+      }
+    }
+
+}
+
+
+.info-section2 {
+    @extend .info-section1;
+    flex-direction: row-reverse;  
+}
+
+
+
+/*Animering - sida*/
+
+.animering-heading{
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  margin-top: 2rem;
+  max-width: 600px;
+  background-color: variables.$white;
+  box-shadow: variables.$shadow;
+}
+
+
+
+/*Katt card*/
+
+.catCard {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  max-width: 500px; 
+  border-radius: 10px;
+  box-shadow: variables.$shadow;
+  background: variables.$white;
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  picture {
+      display: block;
+      width: 100%;
+  }
+
+  &-img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 100%; 
+ 
+      
+      
+&:hover{
+  animation: transformPicture 3s forwards;
+}
+  }
+  
+
+  .cardtext {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .card-title {
+          font-size: 1.5rem;
+          margin: 0.5rem 0;
+      }
+
+      .card-text {
+          font-size: 1rem;
+          margin-bottom: 1.5rem;
+      }
+  }
+
+}
+
+
+/*Katt i kartong*/
+
+.cardboard-cat{
+  position: relative;
+  width: 475px; 
+  margin: auto;
+}
+
+.cardboard {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+
+.cat {
+  position: absolute;
+  bottom: 110px;
+  left: 50%;
+  opacity: 0;
+  z-index: 1;
+  animation: cat-jump 7s 3s infinite linear;
+}
+
+.button-container{
+  margin: 0 auto;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  width: 100%;
+}
+
+
+@property --color-1 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #{variables.$button-color}; 
+}
+
+@property --color-2 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #{variables.$button-click}; 
+}
+
+
+.cool-button {
+    --color-1: #{variables.$button-color};  
+    --color-2: #{variables.$button-click};  
+    margin: 1rem auto;
+    padding: 1rem 2rem;
+    border: 0;
+    font-size: 1rem;
+    color: variables.$button-text;
+    background-color: var(--color-1); 
+    border-radius: 15px;
+    transition: background 0.2s ease-in-out, transform 0.3s ease-in-out;
+
+    &:hover {
+      background: linear-gradient(90deg, var(--color-1), var(--color-2), var(--color-1)); 
+      background-size: 200% 100%; 
+      animation: move-gradient 3s linear infinite; 
+      box-shadow: variables.$shadow;
+  }
+    
+    &.clicked {
+        animation: button-click 3s ease-in-out;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Media queries*/
+/* Skärmar mindre än eller lika med 1024px */
+@media (max-width: 1024px) {
+  .welcome-section {
+    gap: 2rem;
+  }
+
+    .info-section1, .info-section2 {
+        flex-direction: column;
+margin-top: 3rem;
+        padding: 2rem;   
+    }
+
+
+    .catCard {
+      max-width: 420px; 
+  }
+
+  .cardtext {
+      .card-title {
+          font-size: 1.3rem;
+      }
+
+      .card-text {
+          font-size: 0.9rem;
+      }
+  }
+
+  
+}
+
+
+@media (max-width: 599px) {
+
+  .welcome-section {
+    background-image: url("../images/perser.webp?as=webp&width=400") no-repeat center/cover;
+    gap: 1.7rem;
+
+  }
+
+    .button-container {
+        flex-direction: column;
+
+      }
+
+      .catCard {
+        max-width: 300px; 
+        padding: 0.8rem;
+    }
+
+    picture {
+        width: 100%;
+    }
+
+    .catCard-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .cardtext {
+        .card-title {
+            font-size: 1.2rem;
+        }
+
+        .card-text {
+            font-size: 0.85rem;
+        }
+    }
+
+    .cardboard-cat {
+      width: 320px;
+  }
+  .cat {
+    width: 40%;
+      bottom: 50px;
+    
+  }
+
+    }
+
+
+
+
+
+
+

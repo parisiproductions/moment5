@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--Google fonts Roboto-->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"></noscript>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+
+<!--Faviconer-->
+		<!--Mina faviconer-->
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/katt.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="./images/katt.ico">
+
+
+<!--Font awesome-->
+<script src="https://kit.fontawesome.com/a4237efc0a.js" crossorigin="anonymous"></script>
+
+
+
+    <link rel="stylesheet" href="./css/main.scss">
+   <script src="js/app.js" type="module"></script>  
+   <link rel="preload" as="image" href="./images/perser.webp" type="image/webp">
+    <title>Kattcafé</title>
+</head>
+<body>
+    
+    <header class="navigation">
+
+        <!--Logo för mörkt tema och standard-->
+        <picture class="logo">
+            <source srcset="./images/logoDark.svg" media="(prefers-color-scheme: dark)">
+            <img src="./images/kattcafelogo.svg" alt="Logotyp" width="510" height="62">
+        </picture>
+    
+        <!-- Hamburgermenyn -->
+        <button id="open-menu" aria-label="Öppna meny" class="hamburger-btn">
+            <i class="fa-solid fa-bars icon"></i>
+        </button>
+    
+        <nav id="nav-menu">
+            <!-- Stäng-knapp -->
+            <button id="close-menu" aria-label="Stäng meny" class="close-btn">
+                <i class="fa-solid fa-xmark icon"></i>
+            </button>
+            <ul>
+                <li><a href="#" class="nav-link-active">Start</a></li>
+                <li><a href="#">Våra katter</a></li>
+                <li><a href="#">Boka</a></li>
+                <li><a href="#">Adoption</a></li>
+                <li><a href="#">Meny</a></li>
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="./html/animering.html">Animering</a></li>
+                <li><a href="./html/sass.html">Sass</a></li>
+                
+
+            </ul>
+        </nav>
+    </header>
+    
+<main>
+
+
+    <section class="welcome-section">
+        <h1>Välkommen till Meow café</h1>
+        <h2>Kattcaféet i Sundsvall</h2>
+
+        <div class="button-container">
+          <a href="#" class="button">
+            Boka besök <i class="fa-solid fa-paw"></i></a>
+
+
+          <a href="#" class="button">Läs om katterna <i class="fa-solid fa-paw"></i></a>
+        </div>
+
+      </section>
+
+
+      <section class="info-section1">
+        <div class="text-block">
+            <h1>Välkommen på kattcafé</h1>
+            <p>
+            Välkommen till Meow café, Sundsvalls första kattcafé med omplaceringsverksamhet!  Känn dig som hemma hos oss, koppla av med en nybryggd kopp kaffe medan en spinnande katt ligger bredvid dig. Vårt café är en mysig tillflyktsort som låter dig fly undan vardagens stress och måsten.
+            Vi brinner för välbefinnandet hos alla som korsar vår väg – både människor och katter. Förutom att erbjuda en lugn plats för avkoppling, fungerar vi också som ett tillfälligt jourhem för hemlösa katter, där våra katter är tillgängliga för adoption och  får en chans att hitta sitt kärleksfulla för-alltid-hem.
+            </p>
+
+            <div class="button-container">
+            <a href="#" class="button">Läs mer om adoption</a>
+            </div>
+        </div>
+
+        <div class="image-block">
+            <picture>
+                <!-- Bild för desktop skärmar -->
+                <source srcset="./images/klapp.jpg?as=webp&width=420" media="(min-width: 1024px)" type="image/webp">
+        
+                <!-- Bild för tablet skärmar -->
+                <source srcset="./images/klapp.jpg?as=webp&width=320" media="(min-width: 600px) and (max-width: 1023px)" type="image/webp">
+
+                   <!-- Bild för mobil skärmar -->
+                   <source srcset="./images/klapp.jpg?as=webp&width=320" media="(max-width: 599px)" type="image/webp">
+                
+                <!-- Fallback -->
+                <img src="./images/klapp.jpg?width=620" alt="En katt som blir klappad" width="620" height="546" loading="lazy">
+            </picture>
+        </div>
+    </section>
+
+
+    <section class="info-section2">
+       
+        <div class="text-block">
+            <h1>Alltid nybakat veganskt fika</h1>
+            <p>
+                På Meow Café bakar vi alltid färskt och med omtanke. Vi erbjuder ett brett utbud av veganskt fika och har även glutenfria alternativ – för att alla ska kunna njuta av något gott. Till detta serverar vi nybryggt, rättvisemärkt kaffe, så att du kan fika med gott samvete i en mysig miljö.
+            </p>
+
+<div class="button-container">
+
+            <a href="#" class="button">Se vår meny</a>
+            </div>
+        </div>
+
+            <div class="image-block">
+                <picture>
+                    <!-- Bild för desktop skärmar -->
+                    <source srcset="./images/cake.jpg?as=webp&width=420" media="(min-width: 1024px)" type="image/webp">
+            
+                    <!-- Bild för tablet skärmar -->
+                    <source srcset="./images/cake.jpg?as=webp&width=320" media="(min-width: 600px) and (max-width: 1023px)" type="image/webp">
+    
+                       <!-- Bild för mobil skärmar -->
+                       <source srcset="./images/cake.jpg?as=webp&width=320" media="(max-width: 599px)" type="image/webp">
+                    
+                    <!-- Fallback -->
+                    <img src="./images/cake.jpg?width=620" alt="En kaka med blåbär på" width="620" height="546" loading="lazy">
+                </picture>
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+</div>
+    </main>
+    
+
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <p>Meow café 2025 </p>
+        </div>
+    </footer>
+
+
+</body>
+</html>

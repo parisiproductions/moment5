@@ -1,0 +1,67 @@
+
+
+
+@keyframes transformPicture{
+0%{
+    transform: scale(1, 1);
+}
+    100% {
+        transform: scale(1.2, 1.2);
+        border-radius: 10%;
+    }
+  }
+
+
+
+  @keyframes cat-jump {
+    0%, 100% {
+        transform: translateX(-30%) translateY(60px) scale(0.7);
+       opacity: 1;
+    }
+    20% {
+        transform: translateX(-50%) translateY(-30px) scale(1) ;
+     
+    }
+    40% {
+        transform: translateX(-60%) translateY(-100px) scale(1);
+      
+    }
+
+    90% {
+        transform: translateX(-50%) translateY(-70px) scale(1);  
+    }
+    100% {
+        transform: translateX(-50%) translateY(20px) scale(0.8);
+      
+    }
+}
+
+
+@keyframes move-gradient {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100% 20%;
+    }
+}
+
+
+
+@keyframes button-click {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-20deg);
+    }
+    50% {
+        transform: rotate(20deg);
+    }
+    75% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(0deg)
+    }
+}

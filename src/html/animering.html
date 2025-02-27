@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--Google fonts Roboto-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+<!--Faviconer-->
+		<!--Mina faviconer-->
+		<link rel="icon" type="image/png" sizes="32x32" href="../images/katt.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../images/katt.ico">
+
+<!--Font awesome-->
+<script src="https://kit.fontawesome.com/a4237efc0a.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="../css/main.scss">
+
+   <script src="../js/app.js" type="module"></script>
+    <title>Demowebbplats för Yasmine Parisi</title>
+</head>
+<body>
+    
+    <header class="navigation">
+       <!--Logo för mörkt tema och standard-->
+       <picture class="logo">
+        <source srcset="../images/logoDark.svg" media="(prefers-color-scheme: dark)">
+        <img src="../images/kattcafelogo.svg" alt="Logotyp" width="510" height="62">
+    </picture>
+    
+          <!-- Hamburgermenyn -->
+          <button id="open-menu" aria-label="Öppna meny" class="hamburger-btn">
+            <i class="fa-solid fa-bars icon"></i>
+        </button>
+    
+        <nav id="nav-menu">
+            <!-- Stäng-knapp -->
+            <button id="close-menu" aria-label="Stäng meny" class="close-btn">
+                <i class="fa-solid fa-xmark icon"></i>
+            </button>
+            <ul>
+                <li><a href="../index.html" >Start</a></li>
+                <li><a href="#">Våra katter</a></li>
+                <li><a href="#">Boka</a></li>
+                <li><a href="#">Adoption</a></li>
+                <li><a href="#">Meny</a></li>
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="#" class="nav-link-active">Animering</a></li>
+                <li><a href="sass.html">Sass</a></li>
+    
+
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+   <div class="animering-heading">
+    <h2>Animering 1</h2>
+</div>
+     
+        <div class="catCard">
+            <picture>
+                <!-- Bild för desktop skärmar -->
+                <source srcset="../images/red.jpg?as=webp&width=520" media="(min-width: 1024px)" type="image/webp">
+        
+                <!-- Bild för tablet skärmar -->
+                <source srcset="../images/red.jpg?as=webp&width=420" media="(min-width: 600px) and (max-width: 1023px)" type="image/webp">
+        
+                <!-- Bild för mobil skärmar -->
+                <source srcset="../images/red.jpg?as=webp&width=320" media="(max-width: 599px)" type="image/webp">
+                
+                <!-- Fallback -->
+                <img class="catCard-img" src="../images/red.jpg?width=620" alt="En röd katt på ett bord" width="500" height="700" loading="lazy">
+            </picture>
+        
+            <div class="cardtext">
+                <h2 class="card-title">Victor</h2>
+                <p class="card-text">Victor letar efter sitt "för-alltid-hem". Han är en busig kille med hjärtat på rätt ställe. En riktig charmör!</p>
+                <a href="#" class="button">Läs mer</a>
+            </div>
+        </div>
+
+
+        <div class="animering-heading">
+            <h2>Animering 2</h2>
+        </div>
+<div class="cardboard-cat">
+    <img src="../images/cardboard.png" alt="Kartong" class="cardboard">
+    <img src="../images/spock2.png" alt="Katt" class="cat">
+</div>
+
+<div class="animering-heading">
+    <h2>Animering 3</h2>
+</div>
+<div class="button-container">
+<button class="cool-button">Klicka här</button>
+</div>
+
+</main>
+    
+
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <p>Meow café 2025 </p>
+        </div>
+    </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+
+@use "variables";
+
+
+@mixin button-style($button-color, $button-text) {
+    padding: 1rem 2rem;
+    max-width: 100%;
+    background-color: variables.$button-color;
+    color: variables.$button-text;
+    white-space: nowrap;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+
+    &:hover {
+      background-color: lighten(variables.$button-color, 10%);
+    }
+  }
+
+  .button {
+    @include button-style(variables.$button-color, variables.$button-text);
+}
+  
+
+
+@mixin logo($theme) {
+  @if $theme == "light" {
+      content: url($logo-light); // Logotyp för ljust tema
+  } @else {
+      content: url($logo-dark); // Logotyp för mörkt tema
+  }
+}
+
+
+
+  /* Media queries*/
+/* Skärmar mindre än eller lika med 1024px */
+
+@media (max-width: 1024px) {
+
+    .button {
+        font-size: 0.9rem;
+      
+    }
+
+}
