@@ -117,7 +117,20 @@ nav {
 
 
 
+/* Media queries */
+/* Skärmar mindre än eller lika med 1266px, 
+minska storlek på länkar i menyn för att hindra stapling och försvinna utanför skärm */
 
+@media (max-width: 1266px) {
+    nav ul {
+        gap: 0.5rem; 
+    }
+
+    nav ul li a {
+        font-size: 1rem; 
+        padding: 0.5rem 0.5rem; 
+    }
+}
 
 
 /* Media queries */
