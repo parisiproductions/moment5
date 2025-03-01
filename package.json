@@ -16,6 +16,7 @@
     "svgo": "^3.3.2"
   },
   "dependencies": {
+    "chart.js": "^4.4.8",
     "sharp": "^0.33.5"
   }
 }

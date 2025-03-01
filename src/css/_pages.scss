@@ -238,6 +238,36 @@
 
 
 
+/*Diagram-sida*/
+
+
+.diagram-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.8;
+  gap: 2rem;
+  padding: 1rem;
+  max-width: 1300px;
+  margin: auto;
+}
+
+  .diagram-block {
+      flex: 1;
+     
+  
+    h1 {
+      margin-bottom: 1rem;
+      font-size: clamp(1.5rem, 5vw, 3rem);
+
+    
+
+    p {
+      margin-bottom: 1rem;
+     
+    
+  }}}
 
 
 
