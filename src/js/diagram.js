@@ -11,11 +11,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 /**
- * Hämtar statistikdata från API och skapar diagram
+ * Hämtar statistikdata från API och skapar diagram.
  * @async
- * @function loadStatistics
-* @throws {Error} Om anslutningen till API misslyckas
+ * @throws {Error} Om anslutningen till API misslyckas
+ * @returns {Promise<{topCourses: Array<Object>, topPrograms: Array<Object>}>} 
+ * Returnerar en Promise som innehåller två listor: kurser och program.
+ * Datan hämtas från JSON och filtreras efter typ ("Kurs" eller "Program").
+
  */
+
 
 async function loadStatistics() {
     try {
@@ -53,10 +57,11 @@ async function loadStatistics() {
 // Skapa stapeldiagram
 
 /**
- * Skapar ett stapeldiagram med de mest sökta kurserna
- * @param {Array} topCourses - Lista med de 6 mest sökta kurserna
+ * Skapar ett stapeldiagram med de mest sökta kurserna.
+ * @param {Array<Object>} topCourses - Lista med de 6 mest sökta kurserna.
+ * @property {string} topCourses[].name - Namnet på kursen (från JSON).
+ * @property {number} topCourses[].applicantsTotal - Antal sökandev (från JSON).
  */
-
 
 function createBarChart(topCourses) {
     const ctx = document.getElementById("barChart");
@@ -91,8 +96,10 @@ function createBarChart(topCourses) {
 // Skapa cirkeldiagram
 
 /**
- * Skapar ett cirkeldiagram med de mest sökta programmen
- * @param {Array} topPrograms - Lista med de 5 mest sökta programmen
+ * Skapar ett cirkeldiagram med de mest sökta programmen.
+ * @param {Array<Object>} topPrograms - Lista med de 5 mest sökta programmen.
+ * @property {string} topPrograms[].name - Namnet på programmet (från JSON).
+ * @property {number} topPrograms[].applicantsTotal - Antal sökande (från JSON).
  */
 
 function createPieChart(topPrograms) {
