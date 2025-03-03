@@ -238,11 +238,85 @@
 
 
 
+/*Diagram-sida*/
+
+
+.diagram-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.8;
+  gap: 2rem;
+  padding: 1rem;
+  max-width: 1500px;
+  margin: auto;
+}
+
+  .diagram-block {
+      margin-top: 2rem;
+      max-width: 1000px;
+
+     
+  
+    h1 {
+      margin-bottom: 1rem;
+      font-size: clamp(1.5rem, 5vw, 3rem);
+
+
+    
+  }}
 
 
 
 
+  canvas {
+    max-width: 100%;
+    height: auto;
+}
 
+
+
+/*Karta*/
+
+#map { 
+  margin: 0 auto;
+  margin-top: 2rem;
+  height: 500px; 
+  width: 70%;
+}
+
+#search-form {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  margin-top: 2rem;
+
+  .submit-section {
+      display: flex; 
+      align-items: center;
+      gap: 10px; 
+
+      #location-input {
+          flex-grow: 1; 
+          padding: 8px;
+          font-size: 1rem;
+          width: 200px;
+      }
+  }
+}
+
+.jsdocslink{
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  padding: 1rem;
+  margin-bottom: 2rem;
+
+  a{
+    color: black;
+}
+}
 
 
 /* Media queries*/
