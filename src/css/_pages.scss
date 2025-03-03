@@ -306,6 +306,17 @@
   }
 }
 
+.jsdocslink{
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  padding: 1rem;
+  margin-bottom: 2rem;
+
+  a{
+    color: black;
+}
+}
 
 
 /* Media queries*/
